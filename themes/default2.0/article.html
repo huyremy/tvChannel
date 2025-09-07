@@ -140,12 +140,12 @@
 									</div>
 									<!-- .entry-content -->
 									<footer class="entry-meta">
-										<span>分类:
+										<span>Chuyên Đề:
 											{{ #articleSingle.category }}
 												<a href="/category/{{&.}}" rel="category tag">{{&.}}</a>
 											{{ /articleSingle.category }}
 										</span>	
-										<span>标签：
+										<span>Tags：
 											{{ #articleSingle.tags }}
 												<a href="/tags/{{&.}}" rel="tag">{{&.}} </a> 
 											{{ /articleSingle.tags }}
@@ -179,7 +179,7 @@
 						<!-- #primary -->
 						<div id="secondary" class="widget-area" role="complementary">
 							<aside id="recent-posts-2" class="widget widget_recent_entries">
-								<p class="widget-title">近期文章</p>
+								<p class="widget-title">Bài Viết Gần Đây</p>
 								<ul>
 									{{ #widgetRecentlyList }}
 									<li><a href="{{ &url }}">{{ &title }}</a></li>
@@ -233,3 +233,4 @@
 			</body>
 			
 			</html>
+
