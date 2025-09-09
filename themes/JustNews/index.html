@@ -27,6 +27,31 @@
 		{{ &OPT.codeBeforHead }}
 	</head>
 	<style>
+		/* CSS ở đây */
+	.has-submenu .sub-menu {
+	    display: none;
+	    position: absolute;
+	    background-color: #f9f9f9;
+	    min-width: 160px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+	
+	.has-submenu:hover .sub-menu {
+	    display: block;
+	}
+	
+	.has-submenu .sub-menu a {
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	}
+	
+	.has-submenu .sub-menu a:hover {
+	    background-color: #ddd;
+	}
+	/* End CSS */
 		@media (min-width: 768px) {
     .mobile-links {
         display: none !important;
@@ -44,6 +69,14 @@
 		}
 
 	</style>
+	<script>
+			$(document).ready(function(){
+			    $('.has-submenu > a').click(function(e){
+			        e.preventDefault();
+			        $(this).next('.sub-menu').slideToggle();
+			    });
+			});
+	</script>
 	<body class="archive paged category category-zhishi category-5 paged-2 category-paged-2 lang-cn el-boxed">
 		<header class="header">
 			<div class="container clearfix">
@@ -71,9 +104,14 @@
 							{{ /widgetMenuList }}
 						</ul>
 						<ul class='mobile-links widgetlinklist'>
-							{{ #widgetLinkList }}
-									<li><a href="{{ &url }}" target="_blank">{{ &title }}</a></li>
-							{{ /widgetLinkList }}
+							        <li class="menu-item has-submenu">
+										            <a href="#">Liên kết</a>
+										            <ul class="sub-menu widgetlinklist">
+													{{ #widgetLinkList }}
+													<li><a href="{{ &url }}" target="_blank">{{ &title }}</a></li>
+													{{ /widgetLinkList }}
+												    </ul>
+									</li>
 						</ul>
 
 					</nav>
@@ -343,6 +381,7 @@
 
 
 </html>
+
 
 
 
