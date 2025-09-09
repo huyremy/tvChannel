@@ -39,6 +39,10 @@
 		        display: block;
 		    }
 		}
+		.mobile-links.widgetlinklist a {
+		    color: white !important;
+		}
+
 	</style>
 	<body class="archive paged category category-zhishi category-5 paged-2 category-paged-2 lang-cn el-boxed">
 		<header class="header">
@@ -66,15 +70,14 @@
 								<li class="menu-item"><a href="{{ &url }}">{{ &title }}</a></li>
 							{{ /widgetMenuList }}
 						</ul>
-						<ul class='mobile-links widgetlinklist'>
-							{{ #widgetLinkList }}
-									<li><a href="{{ &url }}" target="_blank">{{ &title }}</a></li>
-							{{ /widgetLinkList }}
-						</ul>
 					</nav>
 					<div class="navbar-action pull-right">
 						<div id="j-user-wrap">
-							<!--<a class="login cur" href="/admin">Quản Trị</a>-->
+							<ul class='mobile-links widgetlinklist'>
+							{{ #widgetLinkList }}
+									<li><a href="{{ &url }}" target="_blank">{{ &title }}</a></li>
+							{{ /widgetLinkList }}
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -339,6 +342,7 @@
 
 
 </html>
+
 
 
 
