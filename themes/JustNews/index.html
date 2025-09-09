@@ -112,19 +112,18 @@
 							        <li class="menu-item has-submenu">
 										            <a href="#">Liên kết</a>
 										            <ul class="sub-menu widgetlinklist">
-													<li><a href="https://tivi.matilda.vn" target="_blank">Tivi Box</a></li>
-													<li><a href="https://dich.matilda.vn" target="_blank">Dịch Thuật</a></li>
-													<li><a href="https://chat.matilda.vn" target="_blank">Chatroom</a></li>
-													<li><a href="https://proxy.matilda.vn" target="_blank">Proxy</a></li>
+													{{ #widgetLinkList }}
+													<li><a href="{{ &url }}" target="_blank">{{ &title }}</a></li>
+													{{ /widgetLinkList }}		
 												    </ul>
 									</li>
 						</ul>
 
 					</nav>
-					<!--<div class="navbar-action pull-right"> navbar-action pull-right
+					<!--<div class="navbar-action pull-right">
 						<div id="j-user-wrap">
 							</div>
-					</div>-->
+					</div> -->
 				</div>
 			</div>
 		</header>
@@ -387,6 +386,7 @@
 
 
 </html>
+
 
 
 
