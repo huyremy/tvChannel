@@ -74,7 +74,7 @@
 			font-size: 16px;
             line-height: 48px !important; 
 		}
-		.sub-menu.widgetlinklist.remy {
+		.remy {
 		    color: white !important;
 			font-weight: 400; 
 			font-size: 16px;
@@ -120,9 +120,9 @@
 						<ul class='mobile-links widgetlinklist'>
 							        <li class="menu-item has-submenu">
 										            <a href="#">Liên kết</a>
-										            <ul class="sub-menu widgetlinklist remy">
+										            <ul class="sub-menu widgetlinklist">
 													{{ #widgetLinkList }}
-													<li><a href="{{ &url }}" target="_blank">{{ &title }}</a></li>
+													<li><a href="{{ &url }}" target="_blank" class="remy">{{ &title }}</a></li>
 													{{ /widgetLinkList }}		
 												    </ul>
 									</li>
@@ -395,6 +395,7 @@
 
 
 </html>
+
 
 
 
